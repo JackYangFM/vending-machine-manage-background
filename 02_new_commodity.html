@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<meta content="telephone=no" name="format-detection" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#e5e5e5">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<title>新增商品</title>
+</head>
+
+<body style=" background:#f2f2f2">
+    
+    
+    <header class="header po-f bg-fff">
+    		<!--<a href="#" class="header-left icon-back"></a>-->
+            <h3 class="header-title">新增商品</h3>
+    </header>
+    
+    
+    	<section class="sqtk-main sfjn-main" style="padding-top:55px;"  >
+        	<form action="#">
+            	<div class="pad-10 fc-323232">
+            		<p class="line-40">货柜编号</p>
+                    <div>
+                    	<select class="a_link In-sel-1" id="jfgs">
+                        	<option value="">请选择货柜</option>
+                        	<option value="1">01号货柜</option>
+                            <option value="1">02号货柜</option>
+                            <option value="1">03号货柜</option>
+                            <option value="1">04号货柜</option>
+                            <option value="1">05号货柜</option>
+                            <option value="1">06号货柜</option>
+                        </select>
+                    </div>
+            		<p class="line-40">柜门编号</p>
+                    <div><input type="text" class="In-text" id="zdhm" placeholder="请输入账单号码"></div>
+                    
+                    <p class="line-40">商品名称</p>
+                    <a href="03_commodity_list.html"><div class="spmc"><img src="images/01.jpg" />三得利咖啡饮料(利趣拿铁)</div></a>
+                    
+                    <p class="line-40">商品库存</p>
+                    <div><input type="text" class="In-text" id="zdhm" placeholder="库存数量"></div>
+                    
+                    <p class="line-40">商品状态</p>
+                    <div>
+                    	<select class="a_link In-sel-1" id="jfgs">
+                        	<option value="">请选择商品状态</option>
+                        	<option value="1">正常</option>
+                            <option value="1" style="color:#179ae6;">锁定</option>
+                            <option value="1" style="color:#db2321;">缺货</option>
+                        </select>
+                    </div>
+                    
+                    <div class="btn-main te-cen mar-top-10">
+                        <a class="btn1" href="#">保存</a>
+                        <a class="btn2" href="#">取消</a>
+                    </div>
+
+              </div>
+            </form>
+            
+        </section>
+    
+    
+ 
+
+	<script src="js/jquery-1.9.1.min.js"></script> 
+	<script src="js/touche.js"></script>   
+	<script src="js/global.js"></script>   
+
+<script>
+
+$(function(){
+			
+		//表单提交
+		$('#submitForm').on('click',function(){
+					//判断缴费公司
+					if(!$('#jfgs').val()){
+						shownew('请选择货柜');
+						return false;
+						
+						}
+		
+					//判断缴费公司
+					if(!$('#zdhm').val()){
+						shownew('柜门编号');
+						return false;
+						
+						}
+		
+				
+			})
+			
+	
+	})
+
+</script>
+
+
+
+</body>
+</html>
